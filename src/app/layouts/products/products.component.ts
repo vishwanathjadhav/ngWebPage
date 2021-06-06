@@ -14,6 +14,7 @@ export class ProductsComponent {
       inStock: 0,
       price: 1200,
       country: 'India',
+      product_img: './../../../assets/img/mobile_screen2.jpg',
     },
     {
       id: 1002,
@@ -21,6 +22,7 @@ export class ProductsComponent {
       inStock: 60,
       price: 1500,
       country: 'Germany',
+      product_img: './../../../assets/img/iphone_earphones.jpg',
     },
     {
       id: 1003,
@@ -28,6 +30,7 @@ export class ProductsComponent {
       inStock: 125,
       price: 1800,
       country: '',
+      product_img: './../../../assets/img/iphone_charger.jpg',
     },
   ];
 }
