@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'; // no ./
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // ngModel
 
 import { AppComponent } from './app.component';
 import { OfferPipe } from './pipes/offer.pipe';
@@ -34,7 +35,7 @@ import { BooksComponent } from './products/books/books.component'; //  ./ for sr
     PlantsComponent,
     BooksComponent,
   ], // all compo which controls by Module
-  imports: [BrowserModule], // all common module (logics) to run components
+  imports: [BrowserModule, FormsModule], // all common module (logics) to run components
   bootstrap: [AppComponent], // start root compo
 })
 export class AppModule {}

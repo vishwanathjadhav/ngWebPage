@@ -3,6 +3,9 @@
     <div class="col s12 m4">
         <div class="card">
             <div class="card-image">
+                <!-- Interpollation
+                <img src='{{ mobPart.product_img }}'/>-->
+                <!--Property Binding-->
                 <img [src]="mobPart.product_img" />
                 <!--<img src='{{ mobPart }}' />-->
                 <span class="card-title" style="color: orchid">{{ mobPart.name | uppercase }}</span>
@@ -37,6 +40,15 @@
                     <img *ngSwitchDefault
                         src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Japan.png"
                         width="24" />
+                </p>
+                <p align="center">
+                    <button (click)="downCount(mobPart)">-</button>
+                    {{mobPart.quantity}}
+                    <!-- ngModel = two way Data Binding-> FormsModule-->
+
+                    <input [(ngModel)]="mobPart.quantity" style="width: 60px; text-align: center" />
+                    <button (click)="upCount(mobPart)">+</button>
+
                 </p>
             </div>
         </div>

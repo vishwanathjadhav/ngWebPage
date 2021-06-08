@@ -5,4 +5,5 @@ export interface MobParts {
   price: number;
   country: string;
   product_img: string;
+  quantity: number;
 }

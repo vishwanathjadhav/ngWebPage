@@ -9,7 +9,7 @@ import { MobParts } from './../../model/mobparts.model';
   styleUrls: ['./mobile.component.css'],
 })
 export class MobileComponent implements OnInit {
-  //constructor(private sharedService: SharedService) {}
+  constructor(private sharedService: SharedService) {}
 
   prodCount: any;
   mobParts: MobParts[] = [];
@@ -17,11 +17,22 @@ export class MobileComponent implements OnInit {
   ngOnInit(): void {
     console.log('Calling init the constructor...!');
     this.mobParts = MOBPARTS;
-    //this.prodCount = this.sharedService.countprod(this.mobParts);
+    this.prodCount = this.sharedService.countprod(this.mobParts);
   }
   ngOnChanges(): void {
     //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
     //Add '${implements OnChanges}' to the class.
     console.log('Calling Destroy the constructor...!');
+  }
+  downCount(mobpart: any) {
+    if (mobpart.quantity > 0) {
+      mobpart.quantity = mobpart.quantity - 1;
+    }
+  }
+
+  upCount(mobpart: any) {
+    if (mobpart.quantity < mobpart.inStock) {
+      mobpart.quantity = mobpart.quantity + 1;
+    }
   }
 }
