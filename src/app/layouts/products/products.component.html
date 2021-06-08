@@ -3,55 +3,17 @@
         <!--   Icon Section   -->
         <div class="row">
             <!-- Start : row -->
-            <script>
-                document.write(title);
-            </script>
+            <!-- <script>
+        document.write(title);
+      </script> -->
 
             <!-- {{ title }} : Data binding : interpollation -->
 
-            <div *ngFor="let mobPart of mobParts">
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src='{{ mobPart.product_img }}' />
-                            <span class="card-title" style="color: orchid">{{ mobPart.name | uppercase }}</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i
-                                    class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p appTextcolor>Product Id: {{ mobPart.id }}</p>
-                            <p appTextcolor>Product Name:{{ mobPart.name | uppercase }}</p>
-                            <p>Product MRP:{{ mobPart.price | currency: "INR" }}</p>
-                            <p>
-                                50% Offer Price: {{ mobPart.price | offer | currency: "INR" }}
-                            </p>
-                            <p *ngIf="mobPart.inStock > 0; else outOfStock">
-                                Product Available:{{ mobPart.inStock }}
-                            </p>
-
-                            <ng-template #outOfStock>
-                                <p>Out Of Stock</p>
-                            </ng-template>
-
-                            <p [ngSwitch]="mobPart.country">
-                                Made In :
-                                <img *ngSwitchCase="'Australia'"
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
-                                    width="24" />
-                                <img *ngSwitchCase="'Germany'"
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
-                                    width="24" />
-                                <img *ngSwitchCase="'India'"
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/23px-Flag_of_India.svg.png"
-                                    width="24" />
-                                <img *ngSwitchDefault
-                                    src="https://cdn2.iconfinder.com/data/icons/world-flag-icons/256/Flag_of_Japan.png"
-                                    width="24" />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <app-mobile></app-mobile>
+            <app-books></app-books>
+            <app-plants></app-plants>
+            <app-laptop></app-laptop>
         </div>
     </div>
 </div>
+© 2021 GitHub, Inc.
