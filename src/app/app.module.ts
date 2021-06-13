@@ -40,6 +40,6 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
     ReactiveFormComponent,
   ], // all compo which controls by Module
   imports: [BrowserModule, FormsModule, ReactiveFormsModule], // all common module (logics) to run components
-  bootstrap: [AppComponent, ReactiveFormComponent], // start root compo
+  bootstrap: [ReactiveFormComponent], // start root compo
 })
 export class AppModule {}

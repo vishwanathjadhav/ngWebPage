@@ -1,1 +1,27 @@
-<p>temp-form works!</p>
+<h1 align="center">temp-form works!</h1>
+<div class="container">
+  <form #formVar="ngForm">
+    <!--
+          var uname="Alex"
+          name uname="Alex"
+       -->
+    <input
+      name="uName"
+      placeholder="Username"
+      #unameVar="ngModel"
+      ngModel
+      required
+      pattern="Angular"
+      minlength="3"
+    />
+    <div style="color: red" *ngIf="unameVar.touched && !unameVar.valid">
+      error..!
+      <div *ngIf="unameVar.errors?.required">required</div>
+      <div *ngIf="unameVar.errors?.minlength">minlength</div>
+      <div *ngIf="unameVar.errors?.pattern">pattern</div>
+    </div>
+    <input type="button" (click)="showData(unameVar)" value="Submit data" />
+
+    <input type="submit" [disabled]="!formVar.valid" />
+  </form>
+</div>
