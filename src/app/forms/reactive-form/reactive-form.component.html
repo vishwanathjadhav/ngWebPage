@@ -1,0 +1,26 @@
+<p>reactive-form works!</p>
+<!--
+<div class="container">
+    <form [FormGroup]="formObj">
+        <input name="" formControlName="uNameObj" placeholder="Username" />
+        <div *ngif="uName?.touched && uName.invalid">
+            Error!
+            <div *ngif="uName?.errors?.required">Required...!</div>
+            <div *ngif="uName?.errors?.minlength">Min 3 Length</div>
+        </div>
+    </form>
+
+</div>
+-->
+
+<div class="container">
+    <form [formGroup]="formObj">
+        <input name="" formControlName="uNameObj" placeholder="Username" />
+
+        <div *ngIf="uName?.touched && uName?.invalid">
+            Error...!
+            <div *ngIf="uName?.errors?.required">Required...</div>
+            <div *ngIf="uName?.errors?.minlength">Min 3 Length</div>
+        </div>
+    </form>
+</div>

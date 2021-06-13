@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'; // no ./
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // ngModel
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // ngModel
 
 import { AppComponent } from './app.component';
 import { OfferPipe } from './pipes/offer.pipe';
@@ -15,7 +15,9 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { MobileComponent } from './products/mobile/mobile.component';
 import { LaptopComponent } from './products/laptop/laptop.component';
 import { PlantsComponent } from './products/plants/plants.component';
-import { BooksComponent } from './products/books/books.component'; //  ./ for src
+import { BooksComponent } from './products/books/books.component';
+import { TempFormComponent } from './forms/temp-form/temp-form.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component'; //  ./ for src//  ./ for src
 
 @NgModule({
   // module decorator
@@ -34,8 +36,10 @@ import { BooksComponent } from './products/books/books.component'; //  ./ for sr
     LaptopComponent,
     PlantsComponent,
     BooksComponent,
+    TempFormComponent,
+    ReactiveFormComponent,
   ], // all compo which controls by Module
-  imports: [BrowserModule, FormsModule], // all common module (logics) to run components
-  bootstrap: [AppComponent], // start root compo
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule], // all common module (logics) to run components
+  bootstrap: [AppComponent, ReactiveFormComponent], // start root compo
 })
 export class AppModule {}
