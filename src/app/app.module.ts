@@ -17,7 +17,9 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { PlantsComponent } from './products/plants/plants.component';
 import { BooksComponent } from './products/books/books.component';
 import { TempFormComponent } from './forms/temp-form/temp-form.component';
-import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component'; //  ./ for src//  ./ for src
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { LoginComponent } from './admin/login/login.component'; //  ./ for src//  ./ for src
 
 @NgModule({
   // module decorator
@@ -38,8 +40,12 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
     BooksComponent,
     TempFormComponent,
     ReactiveFormComponent,
+    DashboardComponent,
+    LoginComponent,
   ], // all compo which controls by Module
   imports: [BrowserModule, FormsModule, ReactiveFormsModule], // all common module (logics) to run components
-  bootstrap: [ReactiveFormComponent], // start root compo
+  //bootstrap: [ReactiveFormComponent], // To start app-reactive-form
+  bootstrap: [AppComponent], // To start app-start
+  //bootstrap: [TempFormComponent], // To start app-start
 })
 export class AppModule {}
