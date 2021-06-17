@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core'; // no ./
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // ngModel
+import { AuthService } from './services/auth.service';
 
 import { AppComponent } from './app.component';
 import { OfferPipe } from './pipes/offer.pipe';
@@ -17,9 +19,12 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { PlantsComponent } from './products/plants/plants.component';
 import { BooksComponent } from './products/books/books.component';
 import { TempFormComponent } from './forms/temp-form/temp-form.component';
+import { HomeComponent } from './layouts/home/home.component';
+import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { LoginComponent } from './admin/login/login.component'; //  ./ for src//  ./ for src
+import { LoginComponent } from './admin/login/login.component';
+import { AuthGuard } from './guard/auth.guard'; //  ./ for src//  ./ for src
 
 @NgModule({
   // module decorator
@@ -43,7 +48,8 @@ import { LoginComponent } from './admin/login/login.component'; //  ./ for src//
     DashboardComponent,
     LoginComponent,
   ], // all compo which controls by Module
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule], // all common module (logics) to run components
+  providers: [AuthService],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule], // all common module (logics) to run components
   //bootstrap: [ReactiveFormComponent], // To start app-reactive-form
   bootstrap: [AppComponent], // To start app-start
   //bootstrap: [TempFormComponent], // To start app-start
