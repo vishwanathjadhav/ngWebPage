@@ -15,7 +15,8 @@
 <!--/ banner-two.component.html -->
 
 <!-- contact-us.component.html -->
-<app-contact-us></app-contact-us>
+<h1>{{ myVar }}</h1>
+<app-contact-us [pageName]="title" (fromChild)="myVar=$event"></app-contact-us>
 <!--/ contact-us.component.html -->
 
 <!-- banner-three.component.html -->

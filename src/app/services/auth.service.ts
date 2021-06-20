@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   constructor(private router: Router) {}
+
   isAuth() {
     if (localStorage.getItem('isAdmin')) return true;
     this.router.navigate(['/login']);

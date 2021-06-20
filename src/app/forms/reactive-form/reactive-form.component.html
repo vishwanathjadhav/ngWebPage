@@ -17,10 +17,10 @@
     <form [formGroup]="formObj">
         <input name="" formControlName="uNameObj" placeholder="Username" />
 
-        <div *ngIf="uName?.touched && uName?.invalid">
+        <div *ngIf=uName?.touched && uName?.invalid>
             Error...!
-            <div *ngIf="uName?.errors?.required">Required...</div>
-            <div *ngIf="uName?.errors?.minlength">Min 3 Length</div>
+            <div *ngIf=uName?.errors?.required>Required...</div>
+            <div *ngIf=uName?.errors?.minlength>Min 3 Length</div>
         </div>
     </form>
 </div>

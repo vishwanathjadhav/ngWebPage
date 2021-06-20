@@ -4,6 +4,9 @@ import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // ngModel
 import { AuthService } from './services/auth.service';
 
+// Step 5: import : import { RouterModule, Routes } from '@angular/router';
+// Step 6: imports[ RouterModule.forRoot(appRoutes) ]
+
 import { AppComponent } from './app.component';
 import { OfferPipe } from './pipes/offer.pipe';
 import { TextcolorDirective } from './directives/textcolor.directive';
@@ -19,12 +22,17 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { PlantsComponent } from './products/plants/plants.component';
 import { BooksComponent } from './products/books/books.component';
 import { TempFormComponent } from './forms/temp-form/temp-form.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { HomeComponent } from './layouts/home/home.component';
 import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
-import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { LoginComponent } from './admin/login/login.component';
 import { AuthGuard } from './guard/auth.guard'; //  ./ for src//  ./ for src
+
+// var name:string ="Alex"
+// name=10
+
+// Step 7: appRoutes
 
 @NgModule({
   // module decorator
@@ -45,6 +53,8 @@ import { AuthGuard } from './guard/auth.guard'; //  ./ for src//  ./ for src
     BooksComponent,
     TempFormComponent,
     ReactiveFormComponent,
+    HomeComponent,
+    PageNotFoundComponent,
     DashboardComponent,
     LoginComponent,
   ], // all compo which controls by Module

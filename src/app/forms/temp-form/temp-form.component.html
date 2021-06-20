@@ -3,6 +3,7 @@
   <form #formVar="ngForm">
     <!--
           var uname="Alex"
+
           name uname="Alex"
        -->
     <input
@@ -20,8 +21,8 @@
       <div *ngIf="unameVar.errors?.minlength">minlength</div>
       <div *ngIf="unameVar.errors?.pattern">pattern</div>
     </div>
-    <input type="button" (click)="showData(unameVar)" value="Submit data" />
+    <input type="button" (click)=showData(unameVar) value="Submit data" />
 
-    <input type="submit" [disabled]="!formVar.valid" />
+    <input type="submit" [disabled]=!formVar.valid />
   </form>
 </div>

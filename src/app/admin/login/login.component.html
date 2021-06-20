@@ -1,1 +1,7 @@
-<p>login works!</p>
+<h1 align="center">Login To dashboard!</h1>
+
+<form>
+    <input placeholder="Username" #uname />
+    <input placeholder="Password" #pass />
+    <input type="button" value="Login" class="btn" (click)="login(uname.value, pass.value)"/>
+</form>
