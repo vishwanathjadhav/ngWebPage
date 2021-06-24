@@ -1,0 +1,27 @@
+{"data": [{
+    "id": 3001,
+    "name": "Mobile Screen",
+    "inStock": 0,
+    "price": 3200,
+    "country": "India",
+    "product_img": "./../../assets/img/mobile_screen2.jpg",
+    "quantity": 0
+  },
+  {
+    "id": 3002,
+    "name": "MOBILE HEADPHONES",
+    "inStock": 13,
+    "price": 3500,
+    "country": "Germany",
+    "product_img": "./../../assets/img/iphone_earphones.jpg",
+    "quantity": 0
+  },
+  {
+    "id": 3003,
+    "name": "mobile charger",
+    "inStock": 125,
+    "price": 3800,
+    "country": "",
+    "product_img": "./../../assets/img/iphone_charger.jpg",
+    "quantity": 0
+  }]}

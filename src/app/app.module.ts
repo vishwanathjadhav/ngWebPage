@@ -28,6 +28,11 @@ import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.c
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { LoginComponent } from './admin/login/login.component';
 import { AuthGuard } from './guard/auth.guard'; //  ./ for src//  ./ for src
+import { HttpClientModule } from '@angular/common/http';
+import { MotorolaComponent } from './products/mobile/motorola/motorola.component';
+import { SamsungComponent } from './products/mobile/samsung/samsung.component';
+import { MobileMenuComponent } from './products/mobile/mobile-menu/mobile-menu.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 // var name:string ="Alex"
 // name=10
@@ -57,9 +62,19 @@ import { AuthGuard } from './guard/auth.guard'; //  ./ for src//  ./ for src
     PageNotFoundComponent,
     DashboardComponent,
     LoginComponent,
+    MotorolaComponent,
+    SamsungComponent,
+    MobileMenuComponent,
+    ProductDetailsComponent,
   ], // all compo which controls by Module
   providers: [AuthService],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, AppRoutingModule], // all common module (logics) to run components
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+  ], // all common module (logics) to run components
   //bootstrap: [ReactiveFormComponent], // To start app-reactive-form
   bootstrap: [AppComponent], // To start app-start
   //bootstrap: [TempFormComponent], // To start app-start
